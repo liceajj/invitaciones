@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah Nicolás</title>
+
+    <!--Coneccion a las fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&display=swap" rel="stylesheet">
+
+    <!--ConeccSion a estilos ccs-->
+    <link rel="stylesheet" href="./invitacionNoah.css">
+</head>
+
+<body>
+
+    <div class="container-principal">
+       <audio id="miCancion" controls controls autoplay loop>
+            <source src="./assets/Naturaleza - Danit.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+        
+
+        <div class="img-arbol">
+            <img id="arbol" src="./assets/arbol.png">
+        </div>
+
+        <div class="container-frase">
+            <p class="estilo-tres" id="bienvenido">Bienvenido al mundo</p>
+            <p class="estilo-dos" id="parrafo">El Universo nos ha bendecido con
+                una nueva vida. Invitamos a nuestros
+                seres queridos a acompañarnos en la
+                bienvenida de Noah Nicolás, un ser lleno
+                de pureza y luz divina, cuya misión
+                en este mundo está rodeada de amor celestial.</p>
+
+        </div>
+
+        <div class="container-fecha-nombre">
+            <p class="estilo-uno" id="nombre">Noah</p>
+            <div class="container-fecha">
+                <p class="estilo-dos" id="mes">Nov. </p>
+                <p class="estilo-dos" id="dia">23</p>
+                <p class="estilo-dos" id="hora">13:00</p>
+            </div>
+            <p class="estilo-uno" id="nombre">Nicolás</p>
+        </div>
+
+        <div class="container-familia">
+            <p class="estilo-dos" id="sub">Mi Mamá</p>
+            <p class="estilo-uno">Joana Nataly</p>
+            <img id="mp" src="./assets/mama-noah.png">
+
+            <p class="estilo-dos" id="sub">Mi Papá</p>
+            <p class="estilo-uno">Néstor Ibarra</p>
+            <img id="mp" src="./assets/papa-noah.png">
+        </div>
+
+        <div class="vestimenta">
+            <p class="estilo-dos" id="sub">Código de vestimenta</p>
+            <img id="vestido" src="./assets/vestido.png">
+            <p class="estilo-dos" id="ropa">Ropa totalmente blanca o beige, sin importar la prenda.</p>
+            <img id="camisa" src="./assets/camisa.png">
+        </div>
+
+        <div class="carousel">
+            <div class="slides">
+                <img src="./assets/noah1.png" alt="Imagen 1" id="no1">
+                <img src="./assets/noah2.jpeg" alt="Imagen 2" id="no2">
+                <img src="./assets/noah3.png" alt="Imagen 3" id="no1">
+                <img src="./assets/noah4.jpeg" alt="Imagen 4" id="no2">
+            </div>
+            <button class="prev" onclick="moveSlides(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlides(1)">&#10095;</button>
+        </div>
+
+        <div class="ubicacion">
+            <p class="estilo-dos" id="sub">Ubicación</p>
+            <p class="estilo-dos" id="direc">Salvador Estrada Castañón, Cuernavaca, Morelos 62340</p>
+            <a href="https://maps.app.goo.gl/Tmzk3KNWY5MEvi776">
+                <img id="mapa" src="./assets/mapa.png">
+            </a>
+            <p class="estilo-tres">¡Te esperamos!</p>
+            
+        </div>
+    </div>
+
+    <script src="./invitacionNoah.js"></script>
+</body>
+
+</html>

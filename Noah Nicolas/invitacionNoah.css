@@ -1,0 +1,352 @@
+.container-principal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FAEBD5;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container-frase {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+.container-fecha {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: -300px;
+    margin-bottom: -300px;
+ 
+    
+}
+
+.container-fecha-nombre {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -100px;
+    margin-bottom: -100px;
+}
+
+.container-familia {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.vestimenta {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-familia {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.ubicacion {
+    display: flex;
+    align-items: center;;
+    flex-direction: column;
+}
+.estilo-uno{
+    font-size: 200px;
+    font-family: "Italianno";
+    color: #CA6F1E;
+    
+}
+
+.estilo-dos {
+    font-size: 40px;
+    font-family: "Italiana";
+    color: #256D7B;
+
+}
+
+.estilo-tres {
+    font-size: 150px;
+    font-family: "Italianno";
+    color: #256D7B;
+
+}
+
+#bienvenido{
+    margin-bottom: -1px;
+}
+
+#parrafo {
+  text-align: justify;
+  margin: 20px;
+  
+}
+
+#sub {
+    border-bottom: #256D7B solid;
+    letter-spacing: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: -150px;
+}
+
+#mes {
+    border-top: #256D7B solid;
+    border-bottom: #256D7B solid;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+}
+
+#hora {
+    border-top: #256D7B solid;
+    border-bottom: #256D7B solid;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    
+}
+#dia {
+    height: 150px;
+    width: 150px;
+    background-color: #A2A2A2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    padding-bottom: 20px;
+    
+}
+
+#arbol {
+    height:650px;
+    width: 450px;
+    margin-bottom: -200px;
+}
+
+#mp {
+    height: 450px;
+    width: 650px;
+    margin-top: -200px;
+    margin-bottom: 150px;
+    border-radius: 10%;
+}
+
+#mapa{
+    height:350px;
+    width: 350px;
+    margin-bottom: -50px;
+}
+
+#vestido, #camisa{
+    height:350px;
+    width: 350px;
+    margin-top: 200px;
+}
+
+#ropa {
+    margin-bottom: -150px;
+}
+#direc {
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+
+
+/* Carrusel*/
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(172, 10, 10, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+
+@media only screen and (max-width: 932px) {
+    .container-principal {
+        width: 540px;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        
+    }
+    
+    #arbol {
+        margin-top: -50px;
+        height:450px;
+        width: 300px;
+       
+    }
+
+        
+    .estilo-uno{
+        font-size: 80px;
+        line-height: 0;
+        
+         
+    }
+
+  
+
+    .estilo-dos {
+        font-size: 30px;
+     
+
+    }
+
+    #bienvenido{
+        margin-top: 110px;
+
+    }
+
+    #parrafo {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    .estilo-tres {
+        font-size: 80px;
+    
+    }
+
+    #nombre {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+        
+    .container-fecha {
+        margin-top: -130px;
+        margin-bottom: -150px;
+    
+        
+    }
+
+    .container-fecha-nombre {
+        margin-top: -50px;
+        margin-bottom: 0px;
+    }
+
+        
+    #dia {
+        height: 100px;
+        width: 100px;
+        font-size: 70px;
+        padding-bottom: 20px;
+        
+    }
+    
+    #mp {
+        height: 250px;
+        width: 350px;
+        margin-top: 70px;
+        margin-bottom: 150px;
+    }
+
+    #sub {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-bottom: -20px;
+
+    }
+    
+
+        
+    #vestido{
+        height:250px;
+        width: 250px;
+        margin-top: 40px;
+    }
+    #camisa{
+        height:250px;
+        width: 250px;
+        margin-top: 150px;
+    }
+
+    #ropa {
+        text-align: justify;
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+
+    #direc {
+        text-align: justify;
+        margin-right: 100px;
+        margin-left: 100px;
+        margin-top: 70px;
+
+    }
+
+        
+    
+    #mapa{
+        height:200px;
+        width: 200px;
+       
+    }
+
+    #miCancion {
+        border: 2px solid #256D7B; 
+        border-radius: 10px; 
+        background-color: #FAEBD5; 
+        opacity: .5;
+    }
+
+
+    #no1 {
+        height: 300px;
+        width: 350px;
+    }
+        
+
+
+
+}
