@@ -27,10 +27,30 @@
 <body>
 
     <div class="container-principal">
-       <audio id="miCancion" controls controls autoplay loop>
+        <audio id="miCancion" autoplay>
             <source src="./assets/Naturaleza - Danit.mp3" type="audio/mpeg">
             Tu navegador no soporta el elemento de audio.
         </audio>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const audio = document.getElementById('miCancion');
+        
+                // Intentamos reproducir tan pronto como cargue la página
+                audio.currentTime = 38;  // Inicia en el segundo 38
+                audio.play().catch(error => {
+                    console.log('No se pudo reproducir automáticamente:', error);
+                });
+        
+                // Alternativa: Reproducir cuando el usuario toca la pantalla si autoplay falla
+                document.body.addEventListener('click', function () {
+                    if (audio.paused) {
+                        audio.currentTime = 38;  // Inicia en el segundo 38
+                        audio.play();
+                    }
+                });
+            });
+        </script>
 
         
 

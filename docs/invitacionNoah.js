@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
     const audio = document.getElementById('miCancion');
 
     // Detectar cuando el usuario hace scroll
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, { once: true });  // Se activa solo la primera vez que hace scroll
 });
-
+*/
 // hacer que el carrusel de fotos tenga funcionalidad
 
 let currentSlide = 0;
