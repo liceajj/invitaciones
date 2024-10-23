@@ -1,23 +1,16 @@
-//hacer que la cancion empiece automaticamente al hacer scrool y desdes el seg 38 
-
 document.addEventListener('DOMContentLoaded', function () {
     const audio = document.getElementById('miCancion');
 
-    // Utilizamos IntersectionObserver para detectar cuando el audio entra en la vista
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Fijamos el tiempo de inicio en 38 segundos y reproducimos
-                audio.currentTime = 38;
-                audio.play();
-            }
-        });
+    // Detectar cualquier scroll en la página
+    let haReproducido = false; // Variable para controlar que solo reproduzca una vez
+    window.addEventListener('scroll', function () {
+        if (!haReproducido && window.scrollY > 100) { // Si ya se ha hecho algo de scroll (ajusta el valor de scrollY si es necesario)
+            haReproducido = true; // Evita que se reproduzca más de una vez
+            audio.currentTime = 38; // Inicia la canción en el segundo 38
+            audio.play(); // Reproduce la canción
+        }
     });
-
-    // Observamos el elemento de audio
-    observer.observe(audio);
 });
-
 // hacer que el carrusel de fotos tenga funcionalidad
 
 let currentSlide = 0;
@@ -38,3 +31,46 @@ function moveSlides(n) {
 
     slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Seleccionamos todos los elementos que queremos animar
+    const elementos = document.querySelectorAll('.img-arbol, .container-frase, .container-fecha-nombre, .container-familia, .vestimenta, .carousel, .ubicacion');
+
+    // Configuramos el IntersectionObserver
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');  // Añadimos la clase 'visible' al entrar en la vista
+                observer.unobserve(entry.target);  // Dejamos de observar el elemento una vez animado
+            }
+        });
+    }, { threshold: 0.1 });  // Ajustamos el umbral para que la animación empiece cuando el 10% del elemento es visible
+
+    // Observamos cada uno de los elementos seleccionados
+    elementos.forEach(elemento => {
+        observer.observe(elemento);
+    });
+});
+
+
+/*
+document.addEventListener('DOMContentLoaded', function () {
+    // Seleccionar todos los elementos que tengan la clase 'estilo-dos'
+    const elementos = document.querySelectorAll('.estilo-dos', '.carousel');  // Se corrige agregando el punto (.)
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');  // Solo el nombre de la clase sin el punto
+                observer.unobserve(entry.target);  // Deja de observar una vez que se ha mostrado
+            }
+        });
+    }, { threshold: 0.1 });  // Comienza cuando el 10% del elemento es visible
+
+    // Observa cada elemento con la clase 'estilo-dos'
+    elementos.forEach(elemento => {
+        observer.observe(elemento);
+    });
+});
+*/
