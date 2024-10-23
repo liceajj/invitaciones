@@ -91,7 +91,7 @@
 
 #sub {
     border-bottom: #256D7B solid;
-    letter-spacing: 30px;
+    letter-spacing: 20px;
     padding-left: 100px;
     padding-right: 100px;
     margin-bottom: -150px;
@@ -137,7 +137,6 @@
 #mp {
     height: 450px;
     width: 650px;
-    margin-top: -200px;
     margin-bottom: 150px;
     border-radius: 10%;
 }
@@ -222,14 +221,14 @@ button:hover {
     
     #arbol {
         margin-top: -50px;
-        height:450px;
-        width: 300px;
+        height:350px;
+        width: 250px;
        
     }
 
         
     .estilo-uno{
-        font-size: 70px;
+        font-size: 60px;
         line-height: 0;
         
          
@@ -253,7 +252,7 @@ button:hover {
         margin-right: 70px;
     }
     .estilo-tres {
-        font-size: 70px;
+        font-size: 60px;
     
     }
 
@@ -318,7 +317,9 @@ button:hover {
     }
 
     #direc {
+        font-size: 21px;
         text-align: justify;
+        letter-spacing: 1px;
         margin-right: 100px;
         margin-left: 100px;
         margin-top: 70px;
