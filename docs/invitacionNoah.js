@@ -3,18 +3,18 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Checa si es un dispositivo móvil
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-    if (!isMobile) {
-        // Si no es móvil, intenta reproducir automáticamente
-        audio.currentTime = 38;
-        audio.play();
+    
+    if (isMobile) {
+        // Mute el audio para que los navegadores permitan reproducir automáticamente
+        audio.muted = true;
     }
 
-    // Usa scroll para activar la reproducción en móviles
     window.addEventListener('scroll', function () {
+        // Reproduce cuando haya scroll si está en móvil
         if (audio.paused && isMobile) {
-            audio.currentTime = 38;
+            audio.currentTime = 38; // Empieza en el segundo 38
             audio.play();
+            audio.muted = false; // Quita el mute después del scroll
         }
     });
 });
