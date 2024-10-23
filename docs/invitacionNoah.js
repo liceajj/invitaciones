@@ -1,24 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
     const audio = document.getElementById('miCancion');
-    
-    // Checa si es un dispositivo móvil
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    
-    if (isMobile) {
-        // Mute el audio para que los navegadores permitan reproducir automáticamente
-        audio.muted = true;
-    }
 
-    window.addEventListener('scroll', function () {
-        // Reproduce cuando haya scroll si está en móvil
-        if (audio.paused && isMobile) {
-            audio.currentTime = 38; // Empieza en el segundo 38
-            audio.play();
-            audio.muted = false; // Quita el mute después del scroll
+    // Detectar cuando el usuario hace scroll
+    document.addEventListener('scroll', function () {
+        if (!audio.playing) {
+            audio.currentTime = 38;  // Comienza en el segundo 38
+            audio.play().catch(error => {
+                console.log("Error al reproducir automáticamente en móvil: ", error);
+            });
         }
-    });
+    }, { once: true });  // Se activa solo la primera vez que hace scroll
 });
-
 
 // hacer que el carrusel de fotos tenga funcionalidad
 
