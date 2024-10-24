@@ -83,6 +83,59 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Modal
 
+document.addEventListener('DOMContentLoaded', function () {
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+
+    // Forzar el reflow
+    modal.style.display = 'none';
+    setTimeout(function() {
+        modal.style.display = "block";
+    }, 10);
+
+    // Cerrar el modal cuando el usuario hace clic en la "x"
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Cerrar el modal cuando el usuario hace clic fuera del modal
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    let modal = document.getElementById("myModal");
+    let span = document.getElementsByClassName("close")[0];
+
+    // Mostrar el modal al cargar la página
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden"; // Deshabilitar scroll de fondo
+
+    // Cerrar el modal cuando el usuario hace clic en la "x"
+    span.onclick = function() {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto"; // Rehabilitar scroll de fondo
+    }
+
+    // Cerrar el modal cuando el usuario hace clic fuera del modal
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Rehabilitar scroll de fondo
+        }
+    }
+});
+
+
+
+
+
+
+
+/*
 // Abrir el modal cuando se carga la página
 document.addEventListener('DOMContentLoaded', function () {
     var modal = document.getElementById("myModal");
@@ -103,3 +156,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+*/
