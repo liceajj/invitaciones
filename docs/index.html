@@ -21,38 +21,27 @@
     <!--ancho flexible: Cambia las dimensiones fijas por valores en porcentaje o vw (viewport width),
      para que la página se ajuste dinámicamente al ancho de la pantalla.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
 </head>
 
 <body>
 
+    <!--Modal-->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>!Bienvenido!</h2>
+        </div>
+    </div>
+
     <div class="container-principal">
+
         <audio id="miCancion" autoplay>
             <source src="./assets/Naturaleza - Danit.mp3" type="audio/mpeg">
             Tu navegador no soporta el elemento de audio.
         </audio>
-        
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const audio = document.getElementById('miCancion');
-        
-                // Intentamos reproducir tan pronto como cargue la página
-                audio.currentTime = 38;  // Inicia en el segundo 38
-                audio.play().catch(error => {
-                    console.log('No se pudo reproducir automáticamente:', error);
-                });
-        
-                // Alternativa: Reproducir cuando el usuario toca la pantalla si autoplay falla
-                document.body.addEventListener('click', function () {
-                    if (audio.paused) {
-                        audio.currentTime = 38;  // Inicia en el segundo 38
-                        audio.play();
-                    }
-                });
-            });
-        </script>
 
-        
+
 
         <div class="img-arbol">
             <img id="arbol" src="./assets/arbol.png">
@@ -115,7 +104,7 @@
                 <img id="mapa" src="./assets/mapa.png">
             </a>
             <p class="estilo-tres">¡Te esperamos!</p>
-            
+
         </div>
     </div>
 

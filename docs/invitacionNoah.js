@@ -1,17 +1,22 @@
-/*document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     const audio = document.getElementById('miCancion');
 
-    // Detectar cuando el usuario hace scroll
-    document.addEventListener('scroll', function () {
-        if (!audio.playing) {
-            audio.currentTime = 38;  // Comienza en el segundo 38
-            audio.play().catch(error => {
-                console.log("Error al reproducir automáticamente en móvil: ", error);
-            });
+    // Intentamos reproducir tan pronto como cargue la página
+    audio.currentTime = 38;  // Inicia en el segundo 38
+    audio.play().catch(error => {
+        console.log('No se pudo reproducir automáticamente:', error);
+    });
+
+    // Alternativa: Reproducir cuando el usuario toca la pantalla si autoplay falla
+    document.body.addEventListener('click', function () {
+        if (audio.paused) {
+            audio.currentTime = 38;  // Inicia en el segundo 38
+            audio.play();
         }
-    }, { once: true });  // Se activa solo la primera vez que hace scroll
+    });
 });
-*/
+
+
 // hacer que el carrusel de fotos tenga funcionalidad
 
 let currentSlide = 0;
@@ -75,3 +80,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 */
+
+// Modal
+
+// Abrir el modal cuando se carga la página
+document.addEventListener('DOMContentLoaded', function () {
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+
+    // Mostrar el modal al cargar la página
+    modal.style.display = "block";
+
+    // Cerrar el modal cuando el usuario hace clic en la "x"
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Cerrar el modal cuando el usuario hace clic fuera del modal
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
